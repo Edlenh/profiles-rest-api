@@ -6,3 +6,5 @@ from profiles_api import models
 
 admin.site.register(models.UserProfile)
 """django admin her >> password"""
+
+admin.site.register(models.ProfileFeedItem)
