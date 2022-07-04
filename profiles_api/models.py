@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.models import BaseUserManager
-# Create your models here.
+
 
 class UserProfileManager(BaseUserManager):
     """Manager for User Profiles"""
@@ -26,7 +26,7 @@ class UserProfileManager(BaseUserManager):
         user.is_staff = True
         user.save(using=self._db)
 
-        return user 
+        return user
 
 class UserProfile(AbstractBaseUser,PermissionsMixin):
     """Database model for users in the system"""
